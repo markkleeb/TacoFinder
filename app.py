@@ -32,7 +32,7 @@ def main():
 		# we pass in our client id and secret along with 'v', a version date of API.
 		fsq_query = {
 			'll' : user_latlng,
-			'query': tacos,
+			'query': 'tacos',
 			'client_id' : os.environ.get('FOURSQUARE_CLIENT_ID'), # info from foursquare developer setting, placed inside .env
 			'client_secret' : os.environ.get('FOURSQUARE_CLIENT_SECRET'),
 			'v' : '20121113' # YYYYMMDD
