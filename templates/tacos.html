@@ -1,0 +1,25 @@
+{% extends "layout/main.html" %}
+
+
+
+{% block body %}
+{% for v in venues %}
+
+<body bgcolor="#FFFFFF">
+
+<div class ="taco">
+
+{{ v.name  }}
+<br>
+
+<br>
+
+</div>
+{% endfor %}
+
+
+{% endblock %}
+
+
+{% block styles %}{% endblock %}
+{% block scripts %}{% endblock %}

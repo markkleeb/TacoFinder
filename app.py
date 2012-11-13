@@ -57,7 +57,19 @@ def main():
 
 			# Return raw json for demonstration purposes. 
 			# You would likely use this data in your templates or database in a real app
-			return jsonify(results.json['response'])
+			
+			tacos = results.json['response']
+			venues = tacos.get('venues')
+
+			
+			templateData = {
+
+			'venues' : venues
+
+			}
+
+			return render_template('tacos.html', **templateData)
+
 	
 		else:
 
