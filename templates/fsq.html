@@ -29,23 +29,7 @@
 <div class="row">
   <div class="span8">
 
-    <h3>Setup Foursquare API</h3>
-    <p><a href="https://foursquare.com/developers/apps">Register a new application with Foursquare's developer site</a></p>
-    <p>
-      Take the Client ID and Client Secret and put them inside your .env file<br>
-      
-      <br><b>.env</b><br>
-      <pre>FOURSQUARE_CLIENT_ID=XXXXXXXXXXXXXXXX
-FOURSQUARE_CLIENT_SECRET=XXXXXXXXXXXX</pre>
-
-      <b>app.py</b> will use the environment variables to make the request to Foursquare.
-    </p>
-    <p><b>IMPORTANT</b> Heroku needs your Foursquare client information too, we need to add new config variables to your app.<br>
-
-      <br><b>In your code directory in Terminal run,</b><br>
-      <pre>heroku config:add FOURSQUARE_CLIENT_ID=XXXXXXXXXXXXX 
-heroku config:add FOURSQUARE_CLIENT_SECRET=XXXXXXXXXXXXXX</pre>
-    </p>
+   
 
     <h3>Set up Google</h3>
     <p>Get your own Google API Key here <a href="https://code.google.com/apis/console/b/0/">https://code.google.com/apis/console/b/0/</a>.</p>
@@ -69,7 +53,7 @@ heroku config:add FOURSQUARE_CLIENT_SECRET=XXXXXXXXXXXXXX</pre>
 	Put API Key in line below
 
 --> 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQsmkT26JbAduQgEDzrtBaIjStLou_z3c&sensor=false"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCucfZkmQ-P7jDb09NJ3_mKgCVTifPvCYU&sensor=false"></script>
 
 <!--
 Google Geocoding Javascript API
