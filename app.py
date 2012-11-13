@@ -67,7 +67,7 @@ def main():
 			'venues' : venues
 
 			}
-
+			#return jsonify(tacos)
 			return render_template('tacos.html', **templateData)
 
 	
