@@ -5,7 +5,50 @@
 {% block body %}
 {% for v in venues %}
 
-<body bgcolor="#FFFFFF">
+
+
+<link href="/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+      function initialize() {
+        var myLatlng = new google.maps.LatLng({{ v.location.lat }} , {{ v.location.lng }});
+        var mapOptions = {
+          zoom: 4,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: '{{ v.name }}'
+        });
+      }
+    </script>
+
+</head>
+{% endfor %}
+
+
+<body bgcolor="#FFFFFF" onload="initialize()">
+
+ <div class="container">
+
+            <h1 class="pageheader">
+                <a href="/">TACO FINDER</a>
+            </h1>
+
+            <hr>
+
+
+{% for v in venues %}
+
+
+    <div id="map_canvas"></div>
+
 
 <div class ="taco">
 	<a href="http://www.google.com/search?q={{ v.name }}+{{ v.location.postalCode }}"><h2>{{ v.name }}</h2></a>
